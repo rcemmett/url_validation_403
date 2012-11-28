@@ -1,3 +1,42 @@
+Individual Validation and Testing
+===
+
+Much our validation, normalization, and comparison code will be the same as we wrote it before we realized that this was
+an individual assignment. Also we were able to get much of our normaliztion code from the internet.
+
+For validation we made the decision to say that, if the url is equal to it normalized version, than it is considered valid.
+This is done by first normalizing our URL and then comparing to the original URL. We chose to validate it this way because 
+it was the most general test that we could come up with. Since there are so many possible combinations of valid URLs we felt
+that a simple and reliable validator would be best.
+
+Our comparotors simply take the normalized version of the URL and compare their strings to one another and decide whether or
+not one string is larger, smaller, or equal to another. All of these operations can be found in url.py and url_normalize.py.
+Our comparators also makes sure to check if the URLs are valid in all possible configurations and can never equal if one or
+both of them are invalid. 
+
+A normalized url is one in which www is taken from the beginning if it contains it and http:// is added to the front if it
+does not already contain it. For example:
+
+example.com ---> http://example.com/
+
+All of my testing code for this functionality is located in in test_suite.py which can be run by simply using the following 
+command:
+
+python test_suite.py (The output will be "Pass <number> test)
+
+and for normalization(normalization testing was also code used from the same source as the normaliztion code):
+
+python url_normaliztion.py
+
+Finally my program that outputs all the information for the URLs from a text file is called main_url_display.py which can 
+be run with the following command:
+
+python main_url_display.py <inputfile>
+
+For this program I simply used a hashtable and string comparison to find out whether or not a string is unique and thus 
+allows me to run the program in O(n) time. The validator is the same one that I described above so the canonical version
+must be the same as the original for it to be valid. 
+
 Sort
 ====
 <strong>November 21st Release</strong>
