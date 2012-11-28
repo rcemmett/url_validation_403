@@ -2,16 +2,20 @@ Individual Validation and Testing
 ===
 
 Much our validation, normalization, and comparison code will be the same as we wrote it before we realized that this was
-an individual assignment. Also we were able to get much of our normaliztion code from the internet.
+an individual assignment. Also we were able to get much of our normaliztion code from the internet. In my definition for
+the requirements I simply assumed that a canocolized URL is the same thing as my definition for a normalized URL(definition
+to follow). I made this assumption because it seemed like the definition for canoncalized URL was pretty ambiguous and
+that the definition for a normalized URL is more concrete. Thus I decided to stick with just normalizing the URL when it
+comes to canonicalization. 
 
-For validation we made the decision to say that, if the url is equal to it normalized version, than it is considered valid.
-This is done by first normalizing our URL and then comparing to the original URL. We chose to validate it this way because 
-it was the most general test that we could come up with. Since there are so many possible combinations of valid URLs we felt
+For validation I made the decision to say that, if the url is equal to it normalized version, than it is considered valid.
+This is done by first normalizing our URL and then comparing to the original URL. I chose to validate it this way because 
+it was the most general test that we could come up with. Since there are so many possible combinations of valid URLs I felt
 that a simple and reliable validator would be best.
 
 Our comparotors simply take the normalized version of the URL and compare their strings to one another and decide whether or
 not one string is larger, smaller, or equal to another. All of these operations can be found in url.py and url_normalize.py.
-Our comparators also makes sure to check if the URLs are valid in all possible configurations and can never equal if one or
+Our comparators also makes sure to check if the URLs are valid in all possible configurations and can never be equal if one or
 both of them are invalid. 
 
 A normalized url is one in which www is taken from the beginning if it contains it and http:// is added to the front if it
