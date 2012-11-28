@@ -8,6 +8,9 @@ class URL:
   def isValid(self):
     return self.url == self.normalized
 
+  def getURL(self):
+    return self.url
+  
   def getNormalized(self):
     return self.normalized
 
